@@ -1,95 +1,43 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+//* Dependencias:
+import React from 'react'
+import Box from '@mui/material/Box'
 
-export default function Home() {
+//* Componentes:
+import AboutSection from './AboutSection'
+import WelcomeSection from './WelcomeSection'
+import InstancesSection from './InstancesSection'
+import HowToStartSection from './HowToStartSection'
+import FooterContent from './FooterContent'
+
+import TopNavigation from '@/components/organism/navigation/TopNavigation'
+import SideNavigation from '@/components/organism/navigation/SideNavigation'
+
+//* Constantes:
+const sections = [
+  {label: 'Inicio', id: 'welcome-section'},
+  {label: '¿Qué es?', id: 'about-section'},
+  {label: 'Empezar', id: 'start-section'},
+  {label: 'Instancias', id: 'instances-section'},
+]
+
+export default function LandingPage() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
+    <>
+      <Box display={{xs: 'none', md: 'block'}}>
+        <TopNavigation sections={sections} />
+      </Box>
+      <Box display={{xs: 'block', md: 'none'}}>
+        <SideNavigation sections={sections} />
+      </Box>
+      <main>
+        <WelcomeSection />
+        <AboutSection />
+        <HowToStartSection />
+        <InstancesSection />
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer>
+        <FooterContent />
       </footer>
-    </div>
-  );
+    </>
+  )
 }
