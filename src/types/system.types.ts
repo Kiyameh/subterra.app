@@ -31,10 +31,10 @@ export interface System {
     hidrolog_system?: string
     hidrolog_subsystem?: string
   }
-  explorationData?: {}
-  technicalSheet?: {}
-  topography?: {}
-  multimedia?: {}
+  explorationData?: object
+  technicalSheet?: object
+  topography?: object
+  multimedia?: object
 }
 
 export default System

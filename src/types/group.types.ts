@@ -27,5 +27,5 @@ export default interface Group {
   explorationData?: {
     explorations?: {_id: string; name?: string}[]
   }
-  publicationData?: {}
+  publicationData?: object
 }

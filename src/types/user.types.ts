@@ -22,7 +22,7 @@ export interface User {
 
 export default User
 
-export type Preferences = {}
+export type Preferences = object
 export type Roles = {
   viewer?: {_id: string; name?: string}[]
   editor?: {_id: string; name?: string}[]
