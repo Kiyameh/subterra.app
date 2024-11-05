@@ -13,7 +13,7 @@ export default function HowToStartSection() {
       id="start-section"
       className="landing-section landing-image"
       style={{
-        backgroundImage: `url(/stock/v8.jpg)`,
+        backgroundImage: `url(/stock/v9.jpg)`,
       }}
     >
       <h2>¿Como empezar?</h2>

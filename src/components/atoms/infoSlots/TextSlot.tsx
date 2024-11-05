@@ -6,8 +6,6 @@ interface TextSlotProps extends TypographyProps {
   value?: number | string | undefined | null
   icon?: React.ReactNode
 }
-
-/** Slot básico de texto con icono opcional */
 export default function TextSlot({value, icon, ...props}: TextSlotProps) {
   return (
     <Stack
