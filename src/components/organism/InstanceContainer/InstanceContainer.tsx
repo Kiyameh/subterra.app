@@ -1,8 +1,8 @@
-import getAllInstances from '@/database/actions/getAllInstances'
+import getAllInstances from '@/database/readActions/getAllInstances'
 import Stack from '@mui/material/Stack'
 import {Suspense} from 'react'
-import InstanceCardSkeleton from './InstanceCardSkeleton'
 import InstanceCard from './InstanceCard'
+import InstanceCardSkeleton from './InstanceCardSkeleton'
 
 export default async function InstanceContainer() {
   const data = await getAllInstances()

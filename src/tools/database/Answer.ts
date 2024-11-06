@@ -1,5 +1,5 @@
 //* Clase empleada para encapsular las respuestas de las funciones de petición a la base de datos.
-//* Creado para sustituir a la API Response en peticiones internas del servidor.
+//* Creado para emplear en lugar de la API Response en peticiones internas del servidor.
 //* Funciona con los mismos códigos de estado
 
 export default class Answer<T> {

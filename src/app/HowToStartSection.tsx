@@ -13,7 +13,7 @@ export default function HowToStartSection() {
       id="start-section"
       className="landing-section landing-image"
       style={{
-        backgroundImage: `url(/stock/v9.jpg)`,
+        backgroundImage: `url(/stock/h7.jpg)`,
       }}
     >
       <h2>¿Como empezar?</h2>
@@ -27,7 +27,7 @@ export default function HowToStartSection() {
           </p>
           <LinkButton
             label="Crea tu cuenta"
-            href="/register"
+            href="/signup"
           />
         </GlassBox>
         <GlassBox>

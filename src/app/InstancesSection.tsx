@@ -1,7 +1,7 @@
 //* Dependencias:
 import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined'
 //* Componentes:
-import InstanceContainer from '@/components/organism/InstanceContainer/InstanceContainer'
+import InstanceContainer from '@/components/organism/instanceContainer/InstanceContainer'
 import InfoCard from '@/components/molecules/cards/InfoCard'
 //* Stilos:
 import '@/styles/landing.css'
